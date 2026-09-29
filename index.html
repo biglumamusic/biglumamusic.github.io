@@ -55,19 +55,18 @@
             color: whitesmoke;
             font-size: 55px;
             line-height: 1.1;
-            margin: 0 0 10px 0;
-            text-shadow: 0 0 20px normal;
+            margin: 0 0 10px;
         }
 
         h2 {
             font-size: 28px;
             line-height: 1.2;
-            margin: 0 0 20px 0;
+            margin: 0 0 20px;
         }
 
 
         /* =========================
-           IMAGE
+           ARTIST IMAGE
         ========================= */
 
         img {
@@ -92,13 +91,13 @@
 
 
         /* =========================
-           SOCIAL LINKS
+           ALL BUTTONS
         ========================= */
 
         .social-links {
             width: 100%;
             max-width: 320px;
-            margin: 30px auto 0 auto;
+            margin: 30px auto 0;
 
             display: flex;
             flex-direction: column;
@@ -107,9 +106,14 @@
             gap: 14px;
         }
 
+
+        /* SAME FORMAT FOR EVERY BUTTON */
+
         .social-links a {
             display: block;
+
             width: 100%;
+            height: 48px;
 
             margin: 0;
             padding: 14px 20px;
@@ -125,9 +129,17 @@
 
             text-align: center;
 
-            transition: opacity 0.2s ease,
-                        transform 0.2s ease;
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+
+        /* HOVER */
 
         .social-links a:hover {
             opacity: 0.85;
@@ -136,59 +148,7 @@
 
 
         /* =========================
-           MUSIC SECTION
-        ========================= */
-
-        .box {
-            width: 100%;
-            margin-top: 45px;
-        }
-
-        .box p {
-            margin: 12px 0;
-        }
-
-        .spotify-button {
-            display: inline-block;
-
-            margin-top: 10px;
-            padding: 14px 25px;
-
-            background: rgb(236, 242, 243);
-            color: black;
-
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-
-            border-radius: 10px;
-
-            transition: opacity 0.2s ease,
-                        transform 0.2s ease;
-        }
-
-        .spotify-button:hover {
-            opacity: 0.85;
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           BOOKINGS
-        ========================= */
-
-        .booking {
-            margin-top: 40px;
-        }
-
-        .booking p {
-            font-size: 22px;
-            margin: 0;
-        }
-
-
-        /* =========================
-           TABLET
+           MOBILE
         ========================= */
 
         @media (max-width: 768px) {
@@ -213,7 +173,7 @@
 
 
         /* =========================
-           MOBILE
+           SMALL MOBILE
         ========================= */
 
         @media (max-width: 480px) {
@@ -251,21 +211,9 @@
             }
 
             .social-links a {
-                padding: 13px 18px;
+                height: 46px;
+                padding: 12px 18px;
                 font-size: 16px;
-            }
-
-            .box {
-                margin-top: 40px;
-            }
-
-            .booking {
-                margin-top: 35px;
-            }
-
-            .booking p {
-                font-size: 17px;
-                word-break: break-word;
             }
 
         }
@@ -277,28 +225,22 @@
 
 <body>
 
-    <div class="container">
+    <main class="container">
 
 
-        <!-- =========================
-             ARTIST NAME
-        ========================= -->
+        <!-- ARTIST NAME -->
 
         <h1>BigLuma</h1>
 
         <h2>Nonstop</h2>
 
 
-        <!-- =========================
-             ARTIST IMAGE
-        ========================= -->
+        <!-- ARTIST IMAGE -->
 
         <img src="me.jpg" alt="BigLuma">
 
 
-        <!-- =========================
-             DESCRIPTION
-        ========================= -->
+        <!-- DESCRIPTION -->
 
         <p>
             Artist. Real stories. Real energy.
@@ -306,7 +248,8 @@
 
 
         <!-- =========================
-             SOCIAL LINKS
+             ALL BUTTONS
+             SAME SIZE / SAME FORMAT
         ========================= -->
 
         <div class="social-links">
@@ -335,44 +278,15 @@
                 Spotify
             </a>
 
-        </div>
-
-
-        <!-- =========================
-             LATEST MUSIC
-        ========================= -->
-
-        <div class="box">
-
-            <p>We Rising Up</p>
-
-            <p>Out Now</p>
-
-            <a
-                class="spotify-button"
-                href="https://open.spotify.com/album/56zu6oz8TsdN6rWd31ynl7?si=Sq5bhIkWSVKSNul0VR4j4g"
-            >
-                Spotify
+            <a href="mailto:biglumamusic@gmail.com">
+                Collaboration
             </a>
 
         </div>
 
 
-        <!-- =========================
-             BOOKINGS
-        ========================= -->
-
-        <div class="booking">
-
-            <p>
-                Bookings: biglumausic@email.com
-            </p>
-
-        </div>
-
-
-    </div>
+    </main>
 
 </body>
 
-</html>c
+</html>
