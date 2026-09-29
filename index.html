@@ -1,76 +1,378 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-body {
-background: black;
-color: white;
-text-align: center;
-font-family: Arial;
-padding: 40px;
-}
- 
-h1 {
-color: whitesmoke;
-font-size: 55px;
-text-shadow: 0 0 20px normal;
-}
 
-p {
-font-size: 22px;
-}
+    <meta charset="UTF-8">
 
-img {
-width: 230px;
-border-radius: 20px;
-margin: 20px;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-a {
-display: inline-block;
-margin: 10px;
-padding: 12px 20px;
-background: rgb(236, 242, 243);
-color: black;
-text-decoration: none;
-font-weight: bold;
-border-radius: 10px;
-}
+    <title>BigLuma</title>
 
-.box {
-margin-top: 30px;
-}
-</style>
+    <style>
+
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px 20px;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           HEADINGS
+        ========================= */
+
+        h1 {
+            color: whitesmoke;
+            font-size: 55px;
+            line-height: 1.1;
+            margin: 0 0 10px 0;
+            text-shadow: 0 0 20px normal;
+        }
+
+        h2 {
+            font-size: 28px;
+            line-height: 1.2;
+            margin: 0 0 20px 0;
+        }
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        img {
+            display: block;
+            width: 230px;
+            max-width: 80%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        p {
+            font-size: 22px;
+            line-height: 1.4;
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .social-links {
+            width: 100%;
+            max-width: 320px;
+            margin: 30px auto 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            gap: 14px;
+        }
+
+        .social-links a {
+            display: block;
+            width: 100%;
+
+            margin: 0;
+            padding: 14px 20px;
+
+            background: rgb(236, 242, 243);
+            color: black;
+
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            transition: opacity 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MUSIC SECTION
+        ========================= */
+
+        .box {
+            width: 100%;
+            margin-top: 45px;
+        }
+
+        .box p {
+            margin: 12px 0;
+        }
+
+        .spotify-button {
+            display: inline-block;
+
+            margin-top: 10px;
+            padding: 14px 25px;
+
+            background: rgb(236, 242, 243);
+            color: black;
+
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+
+            border-radius: 10px;
+
+            transition: opacity 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+        .spotify-button:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           BOOKINGS
+        ========================= */
+
+        .booking {
+            margin-top: 40px;
+        }
+
+        .booking p {
+            font-size: 22px;
+            margin: 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 30px 15px;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            img {
+                width: 200px;
+                max-width: 75%;
+                margin: 18px auto;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .social-links {
+                max-width: 300px;
+                gap: 12px;
+                margin-top: 25px;
+            }
+
+            .social-links a {
+                padding: 13px 18px;
+                font-size: 16px;
+            }
+
+            .box {
+                margin-top: 40px;
+            }
+
+            .booking {
+                margin-top: 35px;
+            }
+
+            .booking p {
+                font-size: 17px;
+                word-break: break-word;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<h1>BigLuma</h1>
-<h2>Nonstop</h2>
-<img src="me.jpg">
+    <div class="container">
 
- 
-<p>Artist</p>
-<h1>Real stories. Real energy.</h1>
- 
-<a href="https://www.instagram.com/bigluma_">Instagram</a>
-<a href="https://www.youtube.com/bigluma">YouTube</a>
-<a href="https://www.tiktok.com/@bigluma_1 ">TikTok</a>
-<a href="https://www.twitter.com/bigluma_">Twitter</a>
-<a href="https://www.soundcloud.com/bigluma_">SoundCloud</a>
-<a href="https://www.spotify.com/artists/bigluma">Spotify</a>
 
-<div class="box">
-<p>We Rising Up</p>
-<p>Out now</p>
+        <!-- =========================
+             ARTIST NAME
+        ========================= -->
 
-<a href="https://open.spotify.com/album/56zu6oz8TsdN6rWd31ynl7?si=Sq5bhIkWSVKSNul0VR4j4g">Spotify</a>
-</a>
-</div>
+        <h1>BigLuma</h1>
 
-<div class="box">
-<p>Bookings: biglumausic@email.com</p>
+        <h2>Nonstop</h2>
 
-</div>
+
+        <!-- =========================
+             ARTIST IMAGE
+        ========================= -->
+
+        <img src="me.jpg" alt="BigLuma">
+
+
+        <!-- =========================
+             DESCRIPTION
+        ========================= -->
+
+        <p>
+            Artist. Real stories. Real energy.
+        </p>
+
+
+        <!-- =========================
+             SOCIAL LINKS
+        ========================= -->
+
+        <div class="social-links">
+
+            <a href="https://www.instagram.com/bigluma_">
+                Instagram
+            </a>
+
+            <a href="https://www.youtube.com/@bigluma">
+                YouTube
+            </a>
+
+            <a href="https://www.tiktok.com/@bigluma_1">
+                TikTok
+            </a>
+
+            <a href="https://www.twitter.com/bigluma_">
+                Twitter
+            </a>
+
+            <a href="https://www.soundcloud.com/bigluma_">
+                SoundCloud
+            </a>
+
+            <a href="https://www.spotify.com/artists/bigluma">
+                Spotify
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             LATEST MUSIC
+        ========================= -->
+
+        <div class="box">
+
+            <p>We Rising Up</p>
+
+            <p>Out Now</p>
+
+            <a
+                class="spotify-button"
+                href="https://open.spotify.com/album/56zu6oz8TsdN6rWd31ynl7?si=Sq5bhIkWSVKSNul0VR4j4g"
+            >
+                Spotify
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             BOOKINGS
+        ========================= -->
+
+        <div class="booking">
+
+            <p>
+                Bookings: biglumausic@email.com
+            </p>
+
+        </div>
+
+
+    </div>
+
 </body>
-</html>
+
+</html>c
